@@ -7,7 +7,7 @@ public class Item {
     private String Price;
     private String Description;
 
-    public Item(String id, String price, String description, String quantity, String name) {
+    public Item(String id, String name ,String price,String quantity, String description) {
         this.id = id;
         Price = price;
         Description = description;
