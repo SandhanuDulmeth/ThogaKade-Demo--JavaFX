@@ -14,6 +14,9 @@ public class AddCustomerFormController {
 
     public TextField TxtName1;
     public TextField TxtId2;
+    public TextField TxtQuantity1;
+    public TextField TxtPrice1;
+    public TextField TxtDescription1;
     @FXML
     private TextField TxtDescription;
 
@@ -55,11 +58,51 @@ public class AddCustomerFormController {
     }
 
     public void btnRemoveById2OnAction(ActionEvent actionEvent) {
+        ItemList.removeIf(item -> item.getId().equals(TxtId2.getText()));
+
+        System.out.println(ItemList); // Updated list
+        clearText(); // Clear the input fields
     }
 
 
     public void ItemOnKeyReleased(KeyEvent keyEvent) {
-        if(Objects.equals(TxtId2.getText(), "l")){
-            TxtName1.setText("j"); }else {TxtName1.setText(null);}
+
+        for (Item item : ItemList) {
+
+            if (item.getId().equals(TxtId2.getText())) {
+                TxtName1.setText(item.getName());
+                TxtDescription1.setText(item.getDescription());
+                TxtPrice1.setText(item.getPrice());
+                TxtQuantity1.setText(item.getQuantity());
+                return;
+            } else {
+                TxtName1.setText(null);
+                TxtQuantity1.setText(null);
+                TxtPrice1.setText(null);
+                TxtDescription1.setText(null);
+            }
+
+
+        }
     }
+//      ItemList.forEach(item -> {
+//
+//                    if (item.getId().equals(TxtId2.getText())) {
+//                        TxtName1.setText(item.getName());
+//                        TxtDescription1.setText(item.getDescription());
+//                        TxtPrice1.setText(item.getPrice());
+//                        TxtQuantity1.setText(item.getQuantity());
+//
+//                    }else{
+//                        TxtName1.setText(null);
+//                        TxtQuantity1.setText(null);
+//                        TxtPrice1.setText(null);
+//                        TxtDescription1.setText(null);
+//                    }
+//                }
+//
+//        );
+//
+//
+//    }
 }

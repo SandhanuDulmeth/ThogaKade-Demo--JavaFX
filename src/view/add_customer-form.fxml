@@ -10,7 +10,7 @@
    <children>
       <TabPane layoutX="34.0" layoutY="51.0" prefHeight="308.0" prefWidth="370.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
-          <Tab text="Untitled Tab 1">
+          <Tab text="Add">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="213.0" prefWidth="253.0">
                      <children>
@@ -19,19 +19,21 @@
                         <TextField fx:id="TxtQuantity" layoutX="11.0" layoutY="89.0" prefHeight="34.0" prefWidth="185.0" promptText="Quantity" />
                         <TextField fx:id="TxtPrice" layoutX="13.0" layoutY="129.0" prefHeight="33.0" prefWidth="184.0" promptText="Price" />
                         <TextField fx:id="TxtDescription" layoutX="11.0" layoutY="169.0" prefHeight="37.0" prefWidth="183.0" promptText="Item Description" />
-                        <Button layoutX="130.0" layoutY="234.0" mnemonicParsing="false" onAction="#btnRemoveByIdOnAction" text="Remove by Id" />
                         <Button layoutX="251.0" layoutY="234.0" mnemonicParsing="false" onAction="#btnClickOnAction" text="Add Item" />
                      </children>
                   </AnchorPane>
             </content>
           </Tab>
-          <Tab text="Untitled Tab 2">
+          <Tab text="Remove/Search">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
                         <Button layoutX="275.0" layoutY="240.0" mnemonicParsing="false" onAction="#btnRemoveById2OnAction" text="Remove by Id" />
                         <TextField fx:id="TxtId2" layoutX="19.0" layoutY="18.0" onKeyReleased="#ItemOnKeyReleased" prefHeight="36.0" prefWidth="187.0" promptText="Item ID" />
-                        <TextField fx:id="TxtName1" layoutX="21.0" layoutY="59.0" prefHeight="34.0" prefWidth="186.0" promptText="Item Name" />
+                        <TextField fx:id="TxtName1" editable="false" layoutX="20.0" layoutY="63.0" prefHeight="36.0" prefWidth="187.0" promptText="Item Name" />
+                        <TextField fx:id="TxtQuantity1" editable="false" layoutX="21.0" layoutY="106.0" prefHeight="34.0" prefWidth="185.0" promptText="Quantity" />
+                        <TextField fx:id="TxtPrice1" editable="false" layoutX="20.0" layoutY="146.0" prefHeight="36.0" prefWidth="186.0" promptText="Price" />
+                        <TextField fx:id="TxtDescription1" editable="false" layoutX="21.0" layoutY="188.0" prefHeight="37.0" prefWidth="183.0" promptText="Item Description" />
                      </children>
                   </AnchorPane>
             </content>
