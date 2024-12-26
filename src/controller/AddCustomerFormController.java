@@ -3,12 +3,17 @@ package controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import model.Item;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class AddCustomerFormController {
 
+    public TextField TxtName1;
+    public TextField TxtId2;
     @FXML
     private TextField TxtDescription;
 
@@ -47,5 +52,14 @@ public class AddCustomerFormController {
         TxtDescription.setText("");
         TxtPrice.setText("");
         TxtQuantity.setText("");
+    }
+
+    public void btnRemoveById2OnAction(ActionEvent actionEvent) {
+    }
+
+
+    public void ItemOnKeyReleased(KeyEvent keyEvent) {
+        if(Objects.equals(TxtId2.getText(), "l")){
+            TxtName1.setText("j"); }else {TxtName1.setText(null);}
     }
 }
