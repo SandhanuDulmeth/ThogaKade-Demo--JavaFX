@@ -2,6 +2,7 @@ package controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import model.Item;
@@ -36,6 +37,7 @@ public class AddItemFormController {
     void btnClickOnAction(ActionEvent event) {
         ItemList.add(new Item(TxtId.getText(), TxtName.getText(), TxtQuantity.getText(), TxtPrice.getText(), TxtDescription.getText()));
         clearText();
+        new Alert(Alert.AlertType.INFORMATION,"Added").show();
         System.out.println(ItemList);
     }
 
@@ -64,7 +66,7 @@ public class AddItemFormController {
 
     public void btnRemoveById2OnAction(ActionEvent actionEvent) {
         ItemList.removeIf(item -> item.getId().equals(TxtId2.getText()));
-
+        new Alert(Alert.AlertType.INFORMATION,"Removed").show();
         System.out.println(ItemList);
         clearTextRemove();
     }
