@@ -65,8 +65,8 @@ public class AddItemFormController {
     public void btnRemoveById2OnAction(ActionEvent actionEvent) {
         ItemList.removeIf(item -> item.getId().equals(TxtId2.getText()));
 
-        System.out.println(ItemList); // Updated list
-        clearTextRemove(); // Clear the input fields
+        System.out.println(ItemList);
+        clearTextRemove();
     }
 
 
