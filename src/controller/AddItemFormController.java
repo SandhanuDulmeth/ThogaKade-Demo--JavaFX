@@ -4,13 +4,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.input.MouseEvent;
 import model.Item;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
-public class AddCustomerFormController {
+public class AddItemFormController {
 
     public TextField TxtName1;
     public TextField TxtId2;
@@ -48,20 +46,27 @@ public class AddCustomerFormController {
         clearText();
     }
 
+    private void clearTextRemove() {
+        TxtId2.setText(null);
+        TxtName1.setText(null);
+        TxtDescription1.setText(null);
+        TxtPrice1.setText(null);
+        TxtQuantity1.setText(null);
+    }
 
     private void clearText() {
-        TxtId.setText("");
-        TxtName.setText("");
-        TxtDescription.setText("");
-        TxtPrice.setText("");
-        TxtQuantity.setText("");
+        TxtId.setText(null);
+        TxtName.setText(null);
+        TxtDescription.setText(null);
+        TxtPrice.setText(null);
+        TxtQuantity.setText(null);
     }
 
     public void btnRemoveById2OnAction(ActionEvent actionEvent) {
         ItemList.removeIf(item -> item.getId().equals(TxtId2.getText()));
 
         System.out.println(ItemList); // Updated list
-        clearText(); // Clear the input fields
+        clearTextRemove(); // Clear the input fields
     }
 
 

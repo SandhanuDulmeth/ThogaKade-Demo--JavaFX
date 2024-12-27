@@ -39,7 +39,7 @@ public class viewFormController  {
         colDescription.setCellValueFactory(new PropertyValueFactory<>("Description"));
 
         ObservableList<Item> itemList = FXCollections.observableArrayList();
-        for (Item item : AddCustomerFormController.ItemList) {
+        for (Item item : AddItemFormController.ItemList) {
             System.out.println(item);
             itemList.add(item);
         }
