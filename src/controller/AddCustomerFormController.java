@@ -44,8 +44,8 @@ public class AddCustomerFormController {
     public void btnRemoveByIdOnAction(ActionEvent actionEvent) {
         ItemList.removeIf(item -> item.getId().equals(TxtId.getText()));
 
-        System.out.println(ItemList); // Updated list
-        clearText(); // Clear the input fields
+        System.out.println(ItemList);
+        clearText();
     }
 
 
